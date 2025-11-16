@@ -1,6 +1,5 @@
 """
 ScholarMatch - AI-Powered Scholarship Matching Platform
-Built for Hacknomics 2025
 Author: A-P-U-R-B-O
 """
 

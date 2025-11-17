@@ -154,24 +154,38 @@ Use the "Apply Now" links and track your applications offline.
 
 ## 🧮 Matching Algorithm
 
-ScholarMatch uses a **weighted scoring system** with 7 factors:
+ScholarMatch uses a weighted scoring system with 7 factors to determine fit.
+
+### **🚨 Hard Filters (The Non-Negotiables)**
+
+**Before calculating the weighted score, a student must meet the following three hard-filter requirements. Failure on any one of these results in an immediate $\mathbf{0\%}$ match:**
+
+1.  **GPA:** The user's GPA must be greater than or equal to the scholarship's minimum required GPA.
+2.  **Grade Level:** The user's current grade level (e.g., College Sophomore) must be explicitly listed in the scholarship's allowed levels.
+3.  **Location:** The user's state must be listed in the scholarship's states, unless the scholarship is open to 'All' states.
+
+---
+
+### **Weighted Scoring Factors**
+
+Once the Hard Filters are passed, the total Match Score (out of 100%) is calculated based on the following weights:
 
 | Factor | Weight | Description |
-|--------|--------|-------------|
-| **GPA Match** | 20% | Meets minimum GPA requirement |
-| **Major Match** | 25% | Field of study alignment |
-| **Grade Level** | 20% | Educational level eligibility |
-| **Location** | 10% | State/national availability |
-| **Demographics** | 10% | Ethnicity, gender preferences |
-| **Interests** | 10% | Extracurricular alignment |
-| **Special Circumstances** | 5% | First-gen, military, etc. |
+| :--- | :--- | :--- |
+| GPA Match | 20% | Meets minimum GPA requirement |
+| Major Match | 25% | Field of study alignment |
+| Grade Level | 20% | Educational level eligibility |
+| Location | 10% | State/national availability |
+| Demographics | 10% | Ethnicity, gender preferences |
+| Interests | 10% | Extracurricular alignment |
+| Special Circumstances | 5% | First-gen, military, etc. |
 
 **Match Score Calculation:**
-```python
-match_score = (weighted_sum_of_matching_factors / max_possible_score) × 100
-```
 
-Only scholarships with ≥40% match are shown to ensure relevance.
+$$match\_score = \frac{weighted\_sum\_of\_matching\_factors}{max\_possible\_score} \times 100$$
+
+Only scholarships with $\geq40\%$ match are shown to ensure relevance.
+
 
 ---
 
